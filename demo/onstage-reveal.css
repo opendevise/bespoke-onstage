@@ -95,6 +95,10 @@ body {
   font-size: 1.2em;
 }
 
+#notes #content p {
+  margin: 0 0 1em 0;
+}
+
 #time {
   bottom: 0;
   right: 0;
