@@ -15,6 +15,8 @@ endif::[]
 
 An adapter for using the onstage shell (i.e., presenter mode) from http://paulrouget.com/dzslides[DZSlides] to drive a http://markdalgleish.com/projects/bespoke.js[Bespoke.js] presentation.
 
+image::demo/screenshot.jpg[Screenshot]
+
 NOTE: A modified version of the onstage.html file from DZSlides is included in this plugin, but this plugin also works if you use the original file from DZSlides.
 
 ////
