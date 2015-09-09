@@ -19,7 +19,7 @@ module.exports = function() {
         return deck.slides[slide].querySelectorAll('.bespoke-bullet').length;
       },
       hasStep = function(slide, step) {
-        return getSteps(slide) >= step;
+        return getSteps(slide) > step;
       },
       getStep = function() {
         var bullets = deck.slides[deck.slide()].querySelectorAll('.bespoke-bullet');
