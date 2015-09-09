@@ -204,7 +204,16 @@ describe('bespoke-onstage', function() {
       }, 100);
     });
 
-    it('should advance to next bullet on slide when SET_CURSOR command is received with extra step', function(done) {
+    it('should advance to next slide when SET_CURSOR command is received with extra step', function(done) {
+      expect(deck.slide()).toBe(0);
+      window.postMessage('SET_CURSOR 4.1', '*');
+      setTimeout(function() {
+        expect(deck.slide()).toBe(4);
+        done();
+      }, 100);
+    });
+
+    it('should advance to next bullet on slide when SET_CURSOR command is received', function(done) {
       expect(deck.slide()).toBe(0);
       window.postMessage('SET_CURSOR 3.1', '*');
       setTimeout(function() {
@@ -214,12 +223,18 @@ describe('bespoke-onstage', function() {
       }, 100);
     });
 
-    it('should auto-advance to next slide when SET_CURSOR command is received with extra step', function(done) {
+    it('should advance to next slide when SET_CURSOR command is received with step that exceeds bullets', function(done) {
       expect(deck.slide()).toBe(0);
-      window.postMessage('SET_CURSOR 4.1', '*');
+      client.eval("parent.postMessage('REGISTER', '*');");
       setTimeout(function() {
-        expect(deck.slide()).toBe(4);
-        done();
+        client.messages = [];
+        client.eval("parent.postMessage('SET_CURSOR 3.3', '*');");
+        setTimeout(function() {
+          expect(deck.slide()).toBe(3);
+          expect(client.messages.length).toBe(1);
+          expect(client.messages[0]).toBe('CURSOR 4.0');
+          done();
+        }, 100);
       }, 100);
     });
 
