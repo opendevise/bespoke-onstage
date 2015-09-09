@@ -93,7 +93,10 @@ module.exports = function() {
             break;
         }
       };
-    window.addEventListener('message', onMessage, false);
+    deck.on('destroy', function() {
+      removeEventListener('message', onMessage, false);
+    });
+    addEventListener('message', onMessage, false);
   };
 };
 
