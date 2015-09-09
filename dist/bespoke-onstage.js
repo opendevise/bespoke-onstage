@@ -34,7 +34,7 @@ module.exports = function() {
         switch(argv[0]) {
           case 'REGISTER':
             clients.push(client);
-            client.postMessage(['REGISTERED', encodeURIComponent(document.title), deck.slides.length].join(' '), '*');
+            client.postMessage(['REGISTERED', encodeURIComponent(document.title || 'Untitled'), deck.slides.length].join(' '), '*');
             broadcast();
             break;
           case 'FORWARD':
