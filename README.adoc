@@ -13,7 +13,7 @@ image:https://img.shields.io/npm/v/bespoke-onstage.svg[npm package, link=https:/
 image:https://img.shields.io/travis/opendevise/bespoke-onstage/master.svg[Build Status (Travis CI), link=https://travis-ci.org/opendevise/bespoke-onstage]
 endif::[]
 
-An adapter for using the onstage shell (i.e., presenter mode) from http://paulrouget.com/dzslides[DZSlides] to drive a http://markdalgleish.com/projects/bespoke.js[Bespoke.js] presentation.
+An adapter for using the onstage shell (aka presenter mode) from http://paulrouget.com/dzslides[DZSlides] to drive a http://markdalgleish.com/projects/bespoke.js[Bespoke.js] presentation.
 
 image::demo/screenshot.jpg[Screenshot]
 
@@ -38,7 +38,19 @@ Finally, visit the file [path]_demo/index.html_ in your browser to see the plugi
 
 == Download
 
-Download the {uri-raw-file-base}/dist/bespoke-onstage.min.js[production mode version] or the {uri-raw-file-base}/dist/bespoke-onstage.js[development mode version], or use a <<package-managers,package manager>>.
+Download the {uri-raw-file-base}/dist/bespoke-onstage.min.js[production mode version] or the {uri-raw-file-base}/dist/bespoke-onstage.js[development mode version], or use a package manager.
+
+=== npm
+
+```bash
+$ npm install bespoke-onstage
+```
+
+=== Bower
+
+```bash
+$ bower install bespoke-onstage
+```
 
 == Usage
 
@@ -67,24 +79,6 @@ Once the onstage plugin is added, open the file [path]_node_modules/bespoke-onst
 You will see a presenter console that you can use to drive the presentation in another browser window.
 
 Launch the presentation window by clicking on btn:[Launch].
-
-== Package managers
-
-=== npm
-
-```bash
-$ npm install bespoke-onstage
-```
-
-=== Bower
-
-```bash
-$ bower install bespoke-onstage
-```
-
-== Credits
-
-This plugin was built with https://github.com/markdalgleish/generator-bespokeplugin[generator-bespokeplugin].
 
 == License
 
