@@ -3,6 +3,6 @@ bespoke.from('.deck', [
   bespoke.plugins.classes(),
   bespoke.plugins.keys(),
   bespoke.plugins.scale(isWebKit ? 'zoom' : 'transform'),
-  bespoke.plugins.bullets('li, .bullet'),
+  bespoke.plugins.bullets('.bullet'),
   bespoke.plugins.onstage()
 ]);
