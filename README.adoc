@@ -19,7 +19,6 @@ image::demo/screenshot.jpg[Screenshot]
 
 NOTE: A modified version of the onstage.html file from DZSlides is included in this plugin, but this plugin also works if you use the original file from DZSlides.
 
-////
 == Example
 
 //http://opendevise.github.io/bespoke-onstage[View the demo] online.
@@ -33,12 +32,14 @@ Next, install the dependencies inside the project folder using npm:
 
  $ npm install
 
-Finally, visit the file [path]_demo/index.html_ in your browser to see the plugin in action.
-////
+Next, visit the file [path]_demo/onstage.html_ in your browser.
+In the prompt that appears, type [input]_index.html_ to see the adapter in action.
+
+Alternatively, in the prompt you can type the path (either absolute or relative to the [path]_demo_ folder) to any Bespoke.js presentation that has this plugin enabled.
 
 == Download
 
-Download the {uri-raw-file-base}/dist/bespoke-onstage.min.js[production mode version] or the {uri-raw-file-base}/dist/bespoke-onstage.js[development mode version], or use a package manager.
+Download the {uri-raw-file-base}/dist/bespoke-onstage.min.js[production mode version] or the {uri-raw-file-base}/dist/bespoke-onstage.js[development mode version], or use a package manager (NOT YET AVAILABLE!).
 
 === npm
 
